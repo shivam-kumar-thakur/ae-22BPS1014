@@ -48,13 +48,16 @@ const acceptRequest = asyncHandler(async (req, res) => {
     await driver.save({ validateBeforeSave: true });
     await booking.save({ validateBeforeSave: false });
 
-
-    if(!addEmail({"type":"message",
+    const mailData={"type":"message",
         "subject":"You are assigned with a vehicle",
-        "message":`Vehicle id ${booking.vehicle_id}, Driver Id : ${booking.driver_id}, Start time : ${booking.start_date_time}, End Time: ${booking.end_date_time}`,"email":driverEmail }))
-        {
-            console.log("New user added as admin , mail cannot be sent.");
-        }
+        "message":`Vehicle id ${booking.vehicle_id}, Driver Id : ${booking.driver_id}, Start time : ${booking.start_date_time}, End Time: ${booking.end_date_time}`,"email":driverEmail };
+        
+    const mail=await addEmail(mailData);
+
+    if(!addEmail(mail))
+    {
+        console.log("New user added as admin , mail cannot be sent.");
+    }
 
 
     return res.status(201).json(new ApiResponse(201, "Successfully booked"));

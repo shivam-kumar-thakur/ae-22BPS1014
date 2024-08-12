@@ -43,12 +43,16 @@ const newAdminRegister = asyncHandler(async (req, res) => {
         throw new ApiError(501, "Something went wrong.");
     }
 
-    if(!addEmail({"type":"message",
+    const mailData={"type":"message",
         "subject":"You are added as admin",
-        "message":`You are added as admin in our portal, You can login with password ${password}`,"email":user_email }))
-        {
-            console.log("New user added as admin , mail cannot be sent.");
-        }
+        "message":`You are added as admin in our portal, You can login with password ${password}`,"email":user_email };
+    
+    const mail=await addEmail(mailData);
+
+    if(!mail)
+    {
+        console.log("New user added as admin , mail cannot be sent.");
+    }
 
     return res.status(201).json(new ApiResponse(201, "New Admin Created"));
 });
@@ -216,12 +220,16 @@ const assignVehicleDirectly = asyncHandler(async (req, res) => {
         await driver.save({ validateBeforeSave: false });
         await vehicle.save({ validateBeforeSave: false });
 
-        if(!addEmail({"type":"message",
+        const mailData={"type":"message",
             "subject":"You are assigned a vehicle",
-            "message":`Vehicle id ${vehicle_id}, Driver Id : ${driver_id}, Start time : ${start_time}, End Time: ${end_time}`,"email":driver.email }))
-            {
-                console.log("New user added as admin , mail cannot be sent.");
-            }
+            "message":`Vehicle id ${vehicle_id}, Driver Id : ${driver_id}, Start time : ${start_time}, End Time: ${end_time}`,"email":driver.email };
+
+        const mail=await addEmail(mailData);
+
+        if(!mail)
+        {
+            console.log("New user added as admin , mail cannot be sent.");
+        }
 
 
         return res.status(201).json(new ApiResponse(201, "Booking successfully added."));
