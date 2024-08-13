@@ -1,0 +1,209 @@
+
+.request-details-container-card{
+    width: 100%;
+    background-color: #c8aaed33;
+}
+.smallcard-details-container-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+.request-details-container-card-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.smallcard-details-container-card-heading {
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    background: #f5fafe;
+}
+.request-details-container-card-heading  div{
+    padding:0px 10px 0px 0px;
+}
+.request-details-container-card-info {
+    width: 99%;
+    display: flex;
+    justify-items: stretch;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.view-data{
+    color: blue;
+    cursor: pointer;
+}
+.data-request-details {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: center;
+}
+.data-request-details div{
+    padding: 5px;
+}
+.smallcard-data-detials *{
+    padding: 4px;
+}
+.donor-list{
+    border: 1px solid #0000005e;
+    padding: 10px;
+    border-radius: 10px;
+}
+.donor-list-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+}
+.donor-list-container *{
+    margin: 5px;
+}
+.basic-info-request-details-card-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+    width: 100%;
+}
+.donor-accepted-heading {
+    margin-top: 10px;
+    color: green;
+}
+.donor-accepted-note{
+    margin-bottom: 5px;
+    color:rgb(94, 30, 154);
+}
+@media only screen and (max-width:430px) {
+    .smallcard-details-container-card-heading {
+        width: 260px;
+    }
+    .data-request-details {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: flex-start;
+    }
+}
+
+/* .parent-container-requests {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    width: 90%;
+    padding: 15px 0px 15px 0px;
+}
+.donor-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+.details-request {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    border-right: 1px solid black;
+    margin-right: 10px;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+.border-div{
+    border: 1px solid black;
+    margin: 5px
+}
+.position-left{
+    align-self: flex-start;
+}
+.request-heading-color{
+    color: #940686;
+    margin: 5px 0px 10px 0px;
+}
+.details-request *{
+    margin-bottom: 6px;
+}
+.details-request p{
+    font-family: 'Times New Roman', Times, serif
+}
+
+@media only screen and (min-width:768px)  and (max-width:1000px){
+    .parent-container-requests{
+        width: 95%;
+    }
+    .details-request{
+        padding-left: 15px;
+    }
+    .details-request {
+        border-right: 1px solid black;
+        margin-right: 0px;
+    }
+}
+@media only screen and (max-width:430px){
+    .parent-container-requests{
+        width: 85%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 15px;
+    }
+    .details-request{
+    }
+    .details-request {
+        border-right:0px;
+        margin-right: 0px;
+    }
+    .donor-info {
+        padding: 0px;
+    }
+}
+@media only screen and (max-width:325px){
+    .parent-container-requests{
+        margin: 2px 2px 5px 2px;
+    }
+    .details-request{
+    }
+    .details-request {
+        border-right:0px;
+        margin-right: 0px;
+    }
+    .donor-info {
+        padding: 0px;
+    }
+    .person-details-container{
+        width: 240px;
+    }
+
+} */

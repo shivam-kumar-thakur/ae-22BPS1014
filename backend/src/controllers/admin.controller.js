@@ -153,7 +153,6 @@ const newVehicleRegister = asyncHandler(async (req, res) => {
 // Assign vehicle directly to a driver
 const assignVehicleDirectly = asyncHandler(async (req, res) => {
 
-    try {
         const { vehicle_id, driver_id, start_time, end_time } = req.body;
 
         if (!vehicle_id || !driver_id || !start_time || !end_time) {
@@ -233,10 +232,6 @@ const assignVehicleDirectly = asyncHandler(async (req, res) => {
 
 
         return res.status(201).json(new ApiResponse(201, "Booking successfully added."));
-    } catch (error) {
-        console.error(error);
-        return res.status(500).json(new ApiError(500, "An error occurred while processing the request."));
-    }
 });
  
 
@@ -248,7 +243,6 @@ const assignVehicleOpen = asyncHandler(async (req, res) => {
         return res.status(400).json(new ApiResponse(400, "All fields are required."));
     }
 
-    try {
         // Checking  if the vehicle exists
         const vehicle = await vehicleDetails.findOne({vehicle_id:vehicle_id});
         if (!vehicle) {
@@ -260,7 +254,7 @@ const assignVehicleOpen = asyncHandler(async (req, res) => {
             vehicle_id: vehicle.vehicle_id,
             start_date_time: new Date(start_date_time),
             end_date_time: new Date(end_date_time),
-            country,
+            "country":COUNTRY[country],
             pincode,
             status: 0  // Not booked 
         });
@@ -270,11 +264,6 @@ const assignVehicleOpen = asyncHandler(async (req, res) => {
         }
 
         return res.status(201).json(new ApiResponse(201, "Booking successfully created", newBooking));
-
-    } catch (error) {
-        console.error(error);
-        return res.status(500).json(new ApiResponse(500, "An error occurred while creating the booking."));
-    }
 });
 
 // View drivers based on location (pincode and country)
@@ -312,7 +301,7 @@ const viewDriverByLocation = asyncHandler(async (req, res) => {
 const viewDriverByInfo = asyncHandler(async (req, res) => {
     const { name, phone, driver_id } = req.body;
 
-    try {
+
         let matchCriteria = {};
 
         if (driver_id) {
@@ -338,11 +327,25 @@ const viewDriverByInfo = asyncHandler(async (req, res) => {
         }
 
         return res.status(200).json(new ApiResponse(200, "Users found", data));
-    } catch (error) {
-        console.error(error);
-        return res.status(500).json(new ApiResponse(500, "An error occurred while fetching drivers"));
-    }
+
 });
 
 
-export { newAdminRegister, newDriverRegister, newVehicleRegister,assignVehicleDirectly,viewDriverByInfo,viewDriverByLocation,assignVehicleOpen };
+const vehicleDetailsFinder = asyncHandler(async (req, res) => {
+    const { registration_number } = req.body;
+
+    const vehicle=await vehicleDetails.findOne({registration_number:registration_number});
+    if(!vehicle){
+         throw new ApiError(401,"No vehicle found")
+    }
+
+    return res.status(201).json(new ApiResponse(201,"Vehicle info retreived",vehicle));
+});
+
+const bookingsTotal = asyncHandler(async (req, res) => {
+    const vehicle=await bookingDetails.find();
+
+    return res.status(201).json(new ApiResponse(201,"Vehicle info retreived",vehicle));
+});
+
+export { newAdminRegister, newDriverRegister, newVehicleRegister,assignVehicleDirectly,viewDriverByInfo,viewDriverByLocation,assignVehicleOpen,vehicleDetailsFinder,bookingsTotal };

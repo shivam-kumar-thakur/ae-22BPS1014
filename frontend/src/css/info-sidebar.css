@@ -1,0 +1,245 @@
+.info-sidebar-main-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+    height: 100%;
+    overflow: hidden;
+}
+.info-sidebar-main-container hr{
+    width: 95%;
+}
+.options i{
+    font-size: 20px
+}
+.info-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 0px 10px 0px;
+    height: 5vh;
+    color: white;
+}
+.logo-container-info{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.image-logo-container{
+    width: 40px;
+    height: 40px;
+}
+.name-website{
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color:white;
+    padding-left: 15px;
+    letter-spacing: 1.5px;
+}
+
+.option-name{
+    font-size: 18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.logout-option{
+}
+.option-unit{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+.option-unit-logout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    color:white;
+}
+.logo-option-unit {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+}
+.logo-option{
+    width: 30px;
+    height: 30px;
+}
+.options{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.share-options-count {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+.count-total {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.count-type{
+    width: 95%;
+    padding-top: 10px;
+    color: white;
+    font-size: 18px;
+}
+.circle1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.circle2{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.total-count{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:20px;
+    color: #940686;;
+}
+.count-total {
+    display: flex;
+    width: 48%;
+    padding-right: 5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.share-options {
+    word-wrap: break-word;
+    padding: 10px 10px 0px 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+.share-options *{
+    padding-top: 10px;
+    letter-spacing: 1.3px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.share-options-heading{
+    color: greenyellow;
+}
+.share-option-text{
+    font-size: 16px;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.message-dontaion{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.all-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 10px 20px 10px 5px;
+    color: greenyellow;
+    font-size: 20px;
+}
+.all-icons a{
+    color: greenyellow;
+}
+.share-apps{
+    width: 30px;
+    height: 30px;
+}
+.style-inset {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px 10px 5px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.description-share{
+    color: white;
+}
+.selected {
+    border-radius: 15px;
+    background-color: #f5f5fb;
+    width: 88%;
+    border-radius: 18px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #940686;
+}
+
+@media only screen and (max-width:768px) {
+    .share-options *{
+        font-size: 14px;
+    }
+}

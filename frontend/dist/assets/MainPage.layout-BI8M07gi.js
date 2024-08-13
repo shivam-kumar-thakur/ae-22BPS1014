@@ -1,0 +1,1 @@
+import{r as t,j as e,u as r,O as n}from"./index-DeJVmANz.js";function g(){const[s,a]=t.useState(e.jsx("p",{})),c=r();return t.useEffect(()=>{localStorage.getItem("userLogged")==="true"?a(()=>e.jsx(e.Fragment,{children:e.jsx(n,{})})):c("/login")},[]),e.jsx(e.Fragment,{children:s})}export{g as default};

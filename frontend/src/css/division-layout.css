@@ -1,0 +1,88 @@
+.mainarea {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.mainarea-info{
+    width: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    background-color: #f6f6fc;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mainarea-info::-webkit-scrollbar {
+    display: none;
+}
+.sidebar-info{
+    width: 20%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #1450A3;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar-info::-webkit-scrollbar {
+    display: none;
+}
+.mobile-header-main-container{
+    display: none;
+}
+.share-icon-mobile{
+    padding-right: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+}
+@media only screen and (max-width:730px) {
+    .mainarea-info{
+        padding-bottom: 60px;
+    }
+}
+@media only screen and (max-width:430px) {
+    .sidebar-info{
+       display: none;
+    }
+    .mainarea-info{
+        width: 100%;
+    }
+    .mobile-header-main-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        background: #1450A3;
+    }
+    .mobile-header-container {
+        display: flex;
+        background-color: #1450A3;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 10px 0px 10px 10px;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+        z-index: 999;
+    }
+    .mobile-header-container img{
+        width: 30px;
+    }
+    .mobile-header-container p{
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 600;
+        color: white;
+        padding-left: 15px;
+        letter-spacing: 1.5px;
+    }
+}

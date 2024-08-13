@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/image/logo-blue.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c1f42eab8.js" crossorigin="anonymous"></script>
+
+    <title>Vehicle Management</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+        line-height: 1.4;
+        font-family: "nunito";
+      }
+      body{
+        width: 100%;
+        height: 100%;
+        overflow-x:hidden;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      body::-webkit-scrollbar{
+        display: none;
+      }
+  
+      .p1{
+        font-size: 14px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      .p2{
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .card{
+        padding: 15px;
+        border-radius: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        word-break: break-word;
+        margin: 10px 5px 10px 5px;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+      }
+      .card-inset{
+        padding: 15px;
+        border-radius: 18px;
+        box-shadow: inset -1px 1px 8px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        word-break: break-word;
+        margin: 10px 5px 10px 5px;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+      }
+      h3{
+        font-size: 16px;
+        font-family:"Libre Baskerville" , Georgia, 'Times New Roman', Times, serif;
+        font-weight: 600;
+      }
+      /*  for mobile */
+      @media only screen and (max-width:430px) {
+          p{
+            font-size: 14px;
+          }
+          h3{
+            font-size: 15px;
+          }
+          .number-format-specify{
+              padding-left: 10px;
+          }
+    }
+    .number-format-specify{
+        align-self: flex-start;
+        padding-left: 15px;
+        margin-bottom: 10px;
+        color: darkgreen;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.all-requests {
+    /* width: 100%; */
+    min-height: 100%;
+    display: flex;
+    background: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 10px;
+}
+.all-requests-heading{
+    align-self: flex-start;
+    width: 100%;
+}
