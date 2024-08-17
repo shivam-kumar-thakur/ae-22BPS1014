@@ -1,1 +1,0 @@
-const n=async(s,a,r)=>{try{const e=await fetch(a,{method:s,headers:{"Content-Type":"application/json"},body:JSON.stringify(r)});if(e){const t=await e.json();return t.statuscode>=200&&t.statuscode<300?t:!1}else return!1}catch{return!1}};export{n as f};

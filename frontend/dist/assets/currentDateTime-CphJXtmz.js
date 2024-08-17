@@ -1,1 +1,0 @@
-const e=()=>{let t=new Date;return{date:t.toLocaleDateString("en-GB",{year:"numeric",month:"2-digit",day:"2-digit"}),time:t.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:!1})}};export{e as f};

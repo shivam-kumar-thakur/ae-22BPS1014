@@ -1,1 +1,0 @@
-import{f as t}from"./apiFetching-D9uxTKnH.js";const s=()=>{if(localStorage.getItem("userLogged"))t("GET","api/v1/general/user").then(e=>e?!0:(localStorage.setItem("userLogged",!1),!1)).catch(()=>!1);else return!1};export{s as i};
